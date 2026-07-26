@@ -1,8 +1,11 @@
 # PZX_Page
 
-彭梓轩（Zixuan Peng）的学术个人主页 —— React + Vite，部署在 GitHub Pages。
+彭梓轩（Zixuan Peng）的个人主页 —— React + Vite，部署在 GitHub Pages。
 
-结构参考了学术主页的常见排版：左侧固定名片，右侧滚动内容（About / News / Publications / Experience / Education / Awards / More）。
+面向求职（嵌入式软件 / 通信算法 / 电子工程师）。
+布局：左侧固定名片，右侧滚动内容（About / News / Skills / Projects / Experience / Education / Awards / More）。
+
+内容来自 2026-02 版简历。**简历上的手机号没有放到网页上** —— 公开页面挂手机号会被爬虫抓走。
 
 ## 本地开发
 
