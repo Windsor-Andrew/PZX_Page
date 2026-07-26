@@ -1,0 +1,119 @@
+.hero-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0; /* 在 .left-hero 里垂直居中；内容过高时自动退化为顶部对齐 */
+}
+
+.hero-quote {
+  margin-bottom: 1rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-style: italic;
+  line-height: 1.45;
+  text-align: justify;
+  max-width: 28rem;
+}
+
+.profile-pic {
+  width: 62%;
+  aspect-ratio: 1 / 1;
+  margin-bottom: 0.75rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--line);
+}
+
+.meta-name {
+  font-weight: 900;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.meta-name-zh {
+  font-size: 0.85rem;
+  color: var(--faint);
+  letter-spacing: 0.2em;
+}
+
+.meta-description {
+  margin: 0.8rem 0 1rem;
+  font-size: 0.9rem;
+  color: var(--faint);
+  text-align: center;
+}
+
+.meta-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.meta-linkitem {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  background-color: var(--accent-bg);
+  border-radius: 8px;
+  padding: 4px 12px;
+  color: var(--accent);
+  font-family: 'Sigmar One', serif;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  max-width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.25s ease;
+}
+
+.meta-linkitem:hover {
+  background-color: var(--accent-border);
+  color: var(--accent);
+}
+
+.meta-linkitem.disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.contact-small {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 1rem;
+}
+
+.icon-link {
+  font-size: 1.35rem;
+  color: var(--accent);
+  display: inline-flex;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.icon-link:hover {
+  transform: translateY(-2px);
+  color: var(--accent-soft);
+}
+
+.small-text {
+  margin-top: 1rem;
+  color: var(--faint);
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+@media (max-width: 1000px) {
+  .profile-pic {
+    width: 42%;
+    max-width: 180px;
+  }
+  .hero-quote {
+    max-width: 100%;
+  }
+}

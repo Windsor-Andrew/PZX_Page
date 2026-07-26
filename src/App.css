@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&family=Inter:wght@400;500;700;900&display=swap');
+
+/* ======== 主题色：只改这五行就能换整站配色 ======== */
+:root {
+  --accent: #1d4ed8;        /* 主强调色（标题、链接 hover、图标） */
+  --accent-soft: #60a5fa;   /* 次强调色（名字、时间、装饰） */
+  --accent-bg: #eff6ff;     /* 浅底（callout、按钮、课程标签） */
+  --accent-border: #bfdbfe; /* 浅边框 */
+  --ink: #242424;           /* 正文色 */
+  --muted: #888;
+  --faint: #acacac;
+  --line: #eee;
+}
+/* 想换回同学那套紫色，把上面五个 accent 变量替换成：
+   #7c3aed / #a78bfa / #f5f3ff / #ddd6fe */
+
+/* ======== 全局 ======== */
+body {
+  margin: 0;
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: var(--ink);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  font-size: 0.9rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+a {
+  color: var(--accent-soft);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* ======== 布局 ======== */
+.App {
+  min-height: 100vh;
+}
+
+.main-layout {
+  display: flex;
+  flex: 1;
+  margin-top: 56px; /* header 高度 */
+  margin-bottom: 2rem;
+}
+
+/* 左侧固定名片：占满 header 以下的整块高度，内容用 margin:auto 垂直居中。
+   屏幕不够高时名片自己滚动，且不会像 align-items:center 那样把顶部切掉。 */
+.left-hero {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  width: 320px;
+  height: calc(100vh - 56px);
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0 1rem 6rem;
+  background-color: #fff;
+  z-index: 5;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.left-hero::-webkit-scrollbar {
+  display: none;
+}
+
+/* 右侧滚动内容 */
+.right-content {
+  flex: 1;
+  padding: 1rem 6rem 2rem 8rem;
+  background: #fff;
+  margin-left: 320px;
+}
+
+.right-inner {
+  margin: 1rem 0;
+}
+
+/* ======== 响应式 ======== */
+@media (max-width: 1200px) {
+  .left-hero {
+    padding: 2rem 0 2rem 2rem;
+  }
+  .right-content {
+    padding: 1rem 2.5rem 2rem 3rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main-layout {
+    flex-direction: column;
+    margin-top: 56px;
+    width: 100%;
+  }
+
+  .left-hero {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    padding: 1rem 1.25rem 0;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .right-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 0 1.25rem 2rem;
+    box-sizing: border-box;
+  }
+}
+
+div {
+  scroll-margin-top: 4.5rem; /* 锚点跳转时避开 header */
+}
+
+/* ======== 页脚 ======== */
+.site-footer {
+  border-top: 1px solid var(--line);
+  margin-top: 3rem;
+  padding: 1.25rem 0 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--faint);
+  font-style: italic;
+}
+
+.site-footer a {
+  color: var(--faint);
+}
+
+.site-footer a:hover {
+  color: var(--accent);
+}
