@@ -59,7 +59,7 @@ export default function Header() {
     <header className={`header-wrapper ${menuOpen ? 'menu-open' : ''}`}>
       <div className="header-container">
         <div className="header-name">
-          <img src="/favicon.svg" alt="" className="header-logo" />
+          <img src="/favicon.jpg" alt="" className="header-logo" />
           <div className="name-main">{renderName(profile.nameEn, profile.fancyLetter)}</div>
         </div>
 
