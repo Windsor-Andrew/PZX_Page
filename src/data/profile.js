@@ -16,7 +16,7 @@ export const profile = {
   quote:
     '📡 A signal is never just a waveform — it carries the shape of the channel it passed through, the noise it survived, and the hardware that read it. Understanding any one of these means understanding the other three. Engineering, to me, is exactly that kind of listening.',
 
-  avatar: '/avatar.svg', // 换成自己的照片：把图片放进 public/，再改成 '/face.jpg'
+  avatar: '/face.svg', // 换成自己的照片：把图片放进 public/，再改成 '/face.jpg'
   taglines: [
     '🎓 B.Eng. Electronic Science & Technology · Class of 2026',
     '🔧 Embedded Software · Communication Algorithms',
