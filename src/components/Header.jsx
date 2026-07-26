@@ -5,7 +5,8 @@ import profile from '../data/profile';
 const NAV = [
   { id: 'about', label: 'About' },
   { id: 'news', label: 'News' },
-  { id: 'publications', label: 'Publications' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'publications', label: 'Projects' },
   { id: 'experience', label: 'Experience' },
   { id: 'education', label: 'Education' },
   { id: 'awards', label: 'Awards' },

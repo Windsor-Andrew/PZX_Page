@@ -7,13 +7,15 @@ const MY_NAME = profile.nameEn;
 // 每个 tag 一个颜色，没配到的用默认灰
 const tagStyleMap = {
   Selected: '#242424',
-  mmWave: '#1d4ed8',
-  RIS: '#2563eb',
-  'Signal Processing': '#3b82f6',
-  Embedded: '#0ea5e9',
-  FPGA: '#0284c7',
+  Embedded: '#1d4ed8',
+  'C++': '#1e40af',
+  'Computer Vision': '#2563eb',
   Communications: '#4f46e5',
-  'In Submission': '#cccccc',
+  SDR: '#4338ca',
+  MATLAB: '#3b82f6',
+  Hardware: '#0ea5e9',
+  PLC: '#0284c7',
+  Measurement: '#0369a1',
 };
 
 function Authors({ authors }) {
@@ -60,7 +62,7 @@ export default function Publications() {
   return (
     <div className="card" id="publications">
       <div className="publications-select">
-        <div className="card-title">Publications &amp; Projects</div>
+        <div className="card-title">{profile.publicationsTitle || 'Publications'}</div>
         <select
           className="tag-select-filter"
           value={selectedYear}
@@ -103,7 +105,9 @@ export default function Publications() {
                     <p className="publication-abstract">{p.abstract}</p>
                   )}
 
-                  {p.authors?.length > 0 && <Authors authors={p.authors} />}
+                  {p.period && <div className="publication-period">{p.period}</div>}
+
+                  {p.authors?.length > 1 && <Authors authors={p.authors} />}
 
                   {p.venues?.length > 0 && (
                     <div className="publication-venue">

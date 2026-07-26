@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import News from './components/News';
+import Skills from './components/Skills';
 import Publications from './components/Publications';
 import Experience from './components/Experience';
 import Education from './components/Education';
@@ -23,6 +24,7 @@ export default function App() {
           <div className="right-inner">
             <About />
             <News />
+            <Skills />
             <Publications />
             <Experience />
             <Education />

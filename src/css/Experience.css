@@ -111,16 +111,17 @@
 
 .exp-type {
   display: inline-block;
-  padding: 2px 0;
+  padding: 2px 8px;
   font-size: 0.6rem;
   font-weight: 700;
   border-radius: 9999px;
   color: #fff;
-  width: 58px;
   text-align: center;
+  white-space: nowrap;
 }
 
 .exp-type.work { background-color: var(--accent-soft); }
+.exp-type.internship { background-color: var(--accent-soft); }
 .exp-type.project { background-color: #93c5fd; }
 .exp-type.research { background-color: #a5b4fc; }
 
